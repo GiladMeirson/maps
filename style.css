@@ -1,0 +1,135 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+#sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 30%;
+  height: 100%;
+  background: #f2f2f2;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+#sidebar-top {
+  margin-bottom: 10px;
+}
+
+#input-section {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+
+#input-section input {
+  flex: 1;
+  padding: 8px;
+  font-size: 14px;
+}
+
+#input-section button {
+  padding: 8px 12px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+#city-list-container {
+  flex: 1;
+  overflow-y: auto;
+  margin-bottom: 10px;
+}
+
+#city-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#city-list li {
+  padding: 5px 0;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#city-list li span {
+  flex: 1;
+}
+
+/* Remove button for each list item */
+#city-list li button {
+  background: transparent;
+  border: none;
+  color: #c00;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+#sidebar-bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#calculate-btn {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#calculate-btn:hover {
+  background-color: #218838;
+}
+
+#reset-btn {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#reset-btn:hover {
+  background-color: #c82333;
+}
+
+#result {
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  padding: 10px 0;
+}
+
+#result.animate {
+  animation: pop 0.5s ease-out;
+}
+
+@keyframes pop {
+  0% { transform: scale(0.7); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+#map {
+  position: absolute;
+  left: 300px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
